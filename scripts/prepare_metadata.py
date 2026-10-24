@@ -94,7 +94,7 @@ def prepare_metadata() -> list[dict]:
             print(f"Skipping empty record: {site_id}")
             continue
 
-        metadata = {
+        metadata: dict[str, str | int | float | bool] = {
             "site_id": str(site_id),
         }
 
